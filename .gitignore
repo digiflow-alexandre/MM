@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Claude Code & MCP internals (skills, brief client, audit, playwright captures)
+.claude/
+.playwright-mcp/
+.shell/
+
+# Phase DA — drafts HTML A/B/C/D (gardés en local pour validation client)
+variant-output/
