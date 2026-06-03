@@ -4,6 +4,7 @@ import { Arch } from "@/components/ui/Arch";
 import { Button } from "@/components/ui/Button";
 import { InlineLink } from "@/components/ui/InlineLink";
 import { WavyFrame } from "@/components/svg/WavyFrame";
+import { QuoteButton } from "@/components/site/QuoteButton";
 import { pillars } from "@/lib/content";
 
 const num = (i: number) => String(i + 1).padStart(2, "0");
@@ -191,7 +192,7 @@ export function Bespoke() {
               vous sous 48&nbsp;h avec un devis sur-mesure.
             </p>
             <div className="flex flex-wrap items-center gap-4 lg:gap-6">
-              <Button href="/contact">Demander un devis</Button>
+              <QuoteButton>Demander un devis</QuoteButton>
               <InlineLink href="/contact">Nous appeler</InlineLink>
             </div>
           </div>

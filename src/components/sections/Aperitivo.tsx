@@ -4,6 +4,7 @@ import { Kicker } from "@/components/ui/Kicker";
 import { Button } from "@/components/ui/Button";
 import { InlineLink } from "@/components/ui/InlineLink";
 import { WavyFrame } from "@/components/svg/WavyFrame";
+import { QuoteButton } from "@/components/site/QuoteButton";
 import { formulas, photos } from "@/lib/content";
 
 export function Aperitivo() {
@@ -220,7 +221,7 @@ export function Aperitivo() {
             </p>
             <div className="flex flex-wrap items-center gap-4 lg:gap-6">
               <Button href="/contact">Composer mon plateau</Button>
-              <InlineLink href="/sur-mesure">Demander un devis</InlineLink>
+              <QuoteButton variant="link">Demander un devis</QuoteButton>
             </div>
           </div>
         </Reveal>

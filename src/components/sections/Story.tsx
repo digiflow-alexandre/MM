@@ -4,6 +4,7 @@ import { Arch } from "@/components/ui/Arch";
 import { Pullquote } from "@/components/ui/Pullquote";
 import { OliveBranchFrieze } from "@/components/svg/OliveBranchFrieze";
 import { InlineLink } from "@/components/ui/InlineLink";
+import { QuoteButton } from "@/components/site/QuoteButton";
 import { photos } from "@/lib/content";
 
 const facts = [
@@ -144,7 +145,7 @@ export function Story() {
                 <div className="flex items-center gap-6">
                   <InlineLink href="/carte">Découvrir la carte</InlineLink>
                   <span className="text-ink/40" aria-hidden="true">·</span>
-                  <InlineLink href="/sur-mesure">Demander un devis</InlineLink>
+                  <QuoteButton variant="link">Demander un devis</QuoteButton>
                 </div>
               </Reveal>
             </div>

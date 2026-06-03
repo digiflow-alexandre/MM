@@ -525,6 +525,18 @@ export const sumesurePrestations = [
   "Animation culinaire",
 ];
 
+// Options du formulaire devis — extraites du site officiel (page Contact).
+export const quoteOptions = [
+  "Buffet / Dîner",
+  "Anniversaire",
+  "Mariage",
+  "Communion / Baptême",
+  "Séminaire",
+  "Déjeuner d’entreprise",
+  "Apéritivo",
+  "Autre (préciser)",
+];
+
 export const evenementsCovers = [
   "Mariages",
   "Communions",

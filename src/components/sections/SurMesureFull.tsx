@@ -4,6 +4,7 @@ import { Arch } from "@/components/ui/Arch";
 import { Button } from "@/components/ui/Button";
 import { InlineLink } from "@/components/ui/InlineLink";
 import { WavyFrame } from "@/components/svg/WavyFrame";
+import { QuoteButton } from "@/components/site/QuoteButton";
 import {
   pillars,
   enterpriseServices,
@@ -163,6 +164,26 @@ export function SurMesureFull() {
               </StaggerItem>
             ))}
           </Stagger>
+
+          <Reveal delay={0.2}>
+            <div className="mt-12 lg:mt-16 pt-10 border-t border-ink/25 grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
+              <p
+                className="italic text-ink text-[1.05rem] leading-[1.55] max-w-[38em]"
+                style={{
+                  fontFamily: "var(--font-display)",
+                  fontVariationSettings: '"opsz" 144, "SOFT" 70',
+                  fontWeight: 500,
+                }}
+              >
+                Mariage, baptême ou simple dimanche partagé — chaque envie
+                mérite son devis. Cristelle revient sous 48 h.
+              </p>
+              <div className="flex flex-wrap items-center gap-4 lg:gap-6">
+                <QuoteButton>Demander un devis</QuoteButton>
+                <InlineLink href="/aperitivo">Voir l’aperitivo</InlineLink>
+              </div>
+            </div>
+          </Reveal>
         </div>
       </section>
 
@@ -304,7 +325,7 @@ export function SurMesureFull() {
 
           <Reveal>
             <div className="mt-12 lg:mt-14 flex flex-wrap items-center gap-4 lg:gap-6">
-              <Button href="/contact">Demander un devis entreprise</Button>
+              <QuoteButton>Demander un devis entreprise</QuoteButton>
               <InlineLink href="/aperitivo" className="!text-sand hover:!text-accent">
                 Voir les plateaux apéritivo
               </InlineLink>
@@ -506,7 +527,7 @@ export function SurMesureFull() {
                 48&nbsp;h.
               </p>
               <div className="flex flex-wrap items-center gap-4 lg:gap-6">
-                <Button href="/contact">Demander un devis</Button>
+                <QuoteButton>Demander un devis</QuoteButton>
                 <InlineLink href="/contact">Nous appeler</InlineLink>
               </div>
             </div>

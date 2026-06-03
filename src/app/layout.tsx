@@ -4,6 +4,7 @@ import "./globals.css";
 import { SmoothScroll } from "@/components/providers/SmoothScroll";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
+import { QuoteModalProvider } from "@/components/site/QuoteModalProvider";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -69,9 +70,11 @@ export default function RootLayout({
     <html lang="fr" className={`${fraunces.variable} ${inter.variable} ${sacramento.variable}`}>
       <body>
         <SmoothScroll />
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <QuoteModalProvider>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </QuoteModalProvider>
       </body>
     </html>
   );

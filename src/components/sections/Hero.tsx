@@ -23,7 +23,7 @@ export function Hero() {
       />
 
       {/* Cadre carte semi-transparent (inspiration éditoriale Pokota) */}
-      <div className="relative z-20 m-[clamp(0.75rem,2.5vw,1.75rem)] flex-1 border border-light/35 bg-light/8 backdrop-blur-[2px] flex flex-col">
+      <div className="relative z-20 mt-20 sm:mt-[clamp(0.75rem,2.5vw,1.75rem)] mx-[clamp(0.75rem,2.5vw,1.75rem)] mb-[clamp(0.75rem,2.5vw,1.75rem)] flex-1 border border-light/35 bg-light/8 backdrop-blur-[2px] flex flex-col">
         <div className="flex flex-col grow p-[clamp(1.5rem,4vw,3.5rem)] gap-[clamp(2rem,4vw,3rem)]">
 
           {/* ─── TOP ROW : wordmark + nav inline ─── */}
@@ -46,14 +46,14 @@ export function Hero() {
               </StaggerItem>
               <StaggerItem>
                 <p
-                  className="font-sans text-sand/85 text-[clamp(0.78rem,0.9vw,0.92rem)] tracking-[0.18em] uppercase ml-1 mt-2 flex flex-wrap items-center gap-3"
-                  style={{ textShadow: "0 1px 8px rgba(0,0,0,0.5)" }}
+                  className="font-sans font-semibold text-light text-[clamp(0.82rem,1vw,1rem)] tracking-[0.2em] uppercase ml-1 mt-3 flex flex-wrap items-center gap-2.5"
+                  style={{ textShadow: "0 2px 12px rgba(0,0,0,0.7)" }}
                 >
-                  <span>Italien</span>
-                  <span className="text-accent">×</span>
-                  <span>Niçois</span>
-                  <span className="text-accent">×</span>
-                  <span>Asnières</span>
+                  <span>Traiteur</span>
+                  <span className="text-accent">·</span>
+                  <span>Italien &amp; niçois</span>
+                  <span className="text-accent">·</span>
+                  <span>Asnières-sur-Seine</span>
                 </p>
               </StaggerItem>
             </Stagger>
@@ -132,8 +132,8 @@ export function Hero() {
 
             <StaggerItem>
               <p
-                className="font-sans text-sand/90 text-[clamp(0.95rem,1.1vw,1.1rem)] leading-[1.55] max-w-[36em]"
-                style={{ textShadow: "0 1px 10px rgba(0,0,0,0.5)" }}
+                className="font-sans font-medium text-light text-[clamp(0.98rem,1.15vw,1.15rem)] leading-[1.55] max-w-[36em]"
+                style={{ textShadow: "0 2px 14px rgba(0,0,0,0.65)" }}
               >
                 De Gênes à Saint-Tropez, une cuisine qui a le goût du Sud. Recettes de famille, fait maison à Asnières depuis 2022.
               </p>

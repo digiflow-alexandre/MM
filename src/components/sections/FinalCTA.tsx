@@ -1,7 +1,7 @@
 import { Reveal } from "@/components/ui/Reveal";
 import { Kicker } from "@/components/ui/Kicker";
 import { Button } from "@/components/ui/Button";
-import { InlineLink } from "@/components/ui/InlineLink";
+import { QuoteButton } from "@/components/site/QuoteButton";
 
 export function FinalCTA() {
   return (
@@ -35,7 +35,7 @@ export function FinalCTA() {
       <Reveal delay={0.3}>
         <div className="flex gap-6 flex-wrap justify-center items-center">
           <Button href="/aperitivo">Composer un plateau</Button>
-          <InlineLink href="/contact">Demander un devis</InlineLink>
+          <QuoteButton variant="link">Demander un devis</QuoteButton>
         </div>
       </Reveal>
     </section>

@@ -3,6 +3,7 @@ import { Kicker } from "@/components/ui/Kicker";
 import { Button } from "@/components/ui/Button";
 import { InlineLink } from "@/components/ui/InlineLink";
 import { WavyFrame } from "@/components/svg/WavyFrame";
+import { QuoteButton } from "@/components/site/QuoteButton";
 import {
   aperitivoPlateaux,
   aperitivoMignardises,
@@ -152,6 +153,26 @@ export function AperitivoFull() {
             ))}
           </Stagger>
           </WavyFrame>
+
+          <Reveal delay={0.2}>
+            <div className="mt-10 lg:mt-12 flex flex-wrap items-center justify-between gap-4 lg:gap-6">
+              <p
+                className="italic text-ink text-[0.95rem] leading-[1.55] max-w-[32em]"
+                style={{
+                  fontFamily: "var(--font-display)",
+                  fontVariationSettings: '"opsz" 14, "SOFT" 60',
+                  fontWeight: 500,
+                }}
+              >
+                Plateau de votre choix, livré ou à emporter. Commande 24 h à
+                l’avance.
+              </p>
+              <div className="flex flex-wrap items-center gap-4">
+                <Button href="/contact">Passer commande</Button>
+                <QuoteButton variant="link">Demander un devis</QuoteButton>
+              </div>
+            </div>
+          </Reveal>
         </div>
       </section>
 
@@ -247,6 +268,23 @@ export function AperitivoFull() {
               </WavyFrame>
             </Reveal>
           </div>
+
+          <Reveal delay={0.2}>
+            <div className="mt-10 lg:mt-12 flex flex-wrap items-center justify-between gap-4 lg:gap-6 pt-8 border-t border-ink/15">
+              <p
+                className="italic text-ink text-[0.95rem] leading-[1.55] max-w-[34em]"
+                style={{
+                  fontFamily: "var(--font-display)",
+                  fontVariationSettings: '"opsz" 14, "SOFT" 60',
+                  fontWeight: 500,
+                }}
+              >
+                Pour 100 pièces ou plus, on adapte la composition à votre
+                événement.
+              </p>
+              <QuoteButton>Demander un devis</QuoteButton>
+            </div>
+          </Reveal>
         </div>
       </section>
 
@@ -321,6 +359,23 @@ export function AperitivoFull() {
               </StaggerItem>
             ))}
           </Stagger>
+
+          <Reveal delay={0.2}>
+            <div className="mt-10 lg:mt-12 flex flex-wrap items-center justify-between gap-4 lg:gap-6">
+              <p
+                className="italic text-ink text-[0.95rem] leading-[1.55] max-w-[34em]"
+                style={{
+                  fontFamily: "var(--font-display)",
+                  fontVariationSettings: '"opsz" 14, "SOFT" 60',
+                  fontWeight: 500,
+                }}
+              >
+                Idéal en complément d’un plateau, pour rassasier les grandes
+                tablées.
+              </p>
+              <Button href="/contact">Passer commande</Button>
+            </div>
+          </Reveal>
         </div>
       </section>
 

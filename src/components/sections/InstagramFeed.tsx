@@ -58,19 +58,9 @@ export function InstagramFeed() {
         </div>
 
         <Reveal>
-          {/*
-            Widget Elfsight — Instagram Feed live
-            ════════════════════════════════════════════════════════════════
-            ACTIVATION (à faire avant la mise en production) :
-            1. Alex/Cristelle crée un widget "Instagram Feed" sur
-               https://elfsight.com
-            2. Connecte le compte Instagram @mamarazzi_traiteur
-            3. Récupère le widget ID (UUID) dans les paramètres du widget
-            4. Remplace `IG_WIDGET_ID_TO_REPLACE` ci-dessous par cet UUID
-            ════════════════════════════════════════════════════════════════
-          */}
+          {/* Widget Elfsight Instagram Feed officiel @mamarazzi_traiteur */}
           <ElfsightWidget
-            widgetId="IG_WIDGET_ID_TO_REPLACE"
+            widgetId="45180685-ea2c-4252-a7b9-41c6c8fb5565"
             minHeight="500px"
           />
         </Reveal>

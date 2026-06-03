@@ -1,8 +1,8 @@
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 import { Kicker } from "@/components/ui/Kicker";
 import { Button } from "@/components/ui/Button";
-import { InlineLink } from "@/components/ui/InlineLink";
 import { WavyFrame } from "@/components/svg/WavyFrame";
+import { QuoteButton } from "@/components/site/QuoteButton";
 import { carteCategories } from "@/lib/content";
 
 export function CarteFull() {
@@ -35,8 +35,10 @@ export function CarteFull() {
           innerClassName="p-8 sm:p-12 lg:p-16 xl:p-20 grid gap-16 lg:gap-24"
         >
           {carteCategories.map((cat, idx) => (
-            <Reveal key={cat.title}>
-              <article className="grid items-start gap-x-12 gap-y-8 lg:grid-cols-12 lg:gap-x-20">
+            <article
+              key={cat.title}
+              className="grid items-start gap-x-12 gap-y-8 lg:grid-cols-12 lg:gap-x-20"
+            >
                 {/* Header catégorie : Nº + titre + prix range */}
                 <header className="lg:col-span-4 lg:sticky lg:top-28">
                   <div className="flex items-baseline gap-4 pb-4 border-b border-ink/25 mb-4">
@@ -144,8 +146,7 @@ export function CarteFull() {
                     </StaggerItem>
                   ))}
                 </Stagger>
-              </article>
-            </Reveal>
+            </article>
           ))}
         </WavyFrame>
 
@@ -174,7 +175,7 @@ export function CarteFull() {
               </p>
               <div className="flex flex-wrap items-center gap-4 lg:gap-6">
                 <Button href="/aperitivo">Composer un plateau</Button>
-                <InlineLink href="/sur-mesure">Demander un devis</InlineLink>
+                <QuoteButton variant="link">Demander un devis</QuoteButton>
               </div>
             </div>
           </div>

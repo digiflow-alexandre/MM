@@ -40,7 +40,12 @@
    BASE — layered pour que les utilities Tailwind puissent override
    ================================================== */
 @layer base {
-  html { scroll-behavior: smooth; }
+  html {
+    scroll-behavior: smooth;
+    /* `clip` empêche le scroll horizontal SANS créer de scroll container
+       (contrairement à `hidden` qui casserait position: sticky des enfants). */
+    overflow-x: clip;
+  }
 
   html, body {
     background: var(--color-light);
@@ -57,7 +62,8 @@
     font-size: 1rem;
     line-height: 1.65;
     position: relative;
-    overflow-x: hidden;
+    overflow-x: clip;
+    max-width: 100vw;
   }
 
   /* Texture papier subtile globale (z-index 1 + mix-blend multiply au-dessus
@@ -193,6 +199,16 @@
     max-width: 1320px;
     margin-inline: auto;
     padding-inline: var(--shell-x);
+  }
+
+  /* Panel modal — coins simples sur mobile, arche soft sur desktop */
+  .modal-panel {
+    border-radius: 1rem;
+  }
+  @media (min-width: 1024px) {
+    .modal-panel {
+      border-radius: var(--arch-soft);
+    }
   }
 
   .section {
