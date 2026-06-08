@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { business, navLinks } from "@/lib/content";
+import { openBeBookWidget } from "@/components/ui/BeBookWidget";
 
 export function Header() {
   const pathname = usePathname();
@@ -95,12 +96,13 @@ export function Header() {
 
         {/* Right area : CTA desktop OR burger mobile */}
         <div className="flex items-center gap-3 justify-self-end">
-          <Link
-            href="/aperitivo"
+          <button
+            type="button"
+            onClick={openBeBookWidget}
             className="hidden lg:inline-flex font-sans font-semibold text-[0.85rem] bg-accent text-dark px-5 py-2.5 rounded-full transition-[background,color,transform] duration-[280ms] hover:bg-accent-dark hover:text-light hover:-translate-y-px"
           >
             Commander
-          </Link>
+          </button>
 
           {/* Burger mobile */}
           <button
@@ -240,13 +242,17 @@ export function Header() {
               transition={{ delay: 0.55, duration: 0.4 }}
               className="px-[var(--shell-x)] pt-6 pb-8 border-t border-accent/20 bg-light/85 backdrop-blur-sm flex flex-col gap-5"
             >
-              <Link
-                href="/aperitivo"
-                onClick={() => setMobileOpen(false)}
+              <button
+                type="button"
+                onClick={() => {
+                  setMobileOpen(false);
+                  // léger délai pour laisser le menu se fermer
+                  setTimeout(() => openBeBookWidget(), 320);
+                }}
                 className="inline-flex items-center justify-center gap-2 font-sans font-semibold text-[0.95rem] bg-accent text-dark px-6 py-3.5 rounded-full hover:bg-accent-dark hover:text-light transition-colors duration-[220ms]"
               >
                 Commander en ligne
-              </Link>
+              </button>
 
               <div className="grid gap-3 text-[0.82rem] text-ink/85 leading-[1.45]">
                 <a
@@ -255,6 +261,13 @@ export function Header() {
                 >
                   <span className="text-accent font-bold">·</span>
                   <span className="font-medium">{business.phone}</span>
+                </a>
+                <a
+                  href={business.emailHref}
+                  className="flex items-center gap-3 hover:text-accent transition-colors duration-[220ms] break-all"
+                >
+                  <span className="text-accent font-bold">·</span>
+                  <span className="font-medium">{business.email}</span>
                 </a>
                 <span className="flex items-start gap-3">
                   <span className="text-accent font-bold leading-[1.45]">·</span>

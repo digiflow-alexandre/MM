@@ -52,14 +52,14 @@ export default function MentionsLegalesPage() {
                 }
               />
               <Row
-                label="Contact"
+                label="E-mail"
                 value={
-                  <Link
-                    href="/contact"
+                  <a
+                    href={business.emailHref}
                     className="text-accent hover:text-accent-dark transition-colors"
                   >
-                    Formulaire de contact
-                  </Link>
+                    {business.email}
+                  </a>
                 }
               />
             </LegalBlock>
@@ -69,14 +69,14 @@ export default function MentionsLegalesPage() {
               <Row label="Nom" value="Cristelle DOVERI" />
               <Row label="Qualité" value="Présidente de la SASU MAMMARAZZI" />
               <Row
-                label="Contact"
+                label="E-mail"
                 value={
-                  <Link
-                    href="/contact"
+                  <a
+                    href={business.emailHref}
                     className="text-accent hover:text-accent-dark transition-colors"
                   >
-                    Via le formulaire de contact
-                  </Link>
+                    {business.email}
+                  </a>
                 }
               />
             </LegalBlock>
@@ -204,13 +204,13 @@ export default function MentionsLegalesPage() {
                   fins commerciales.
                 </p>
                 <p>
-                  Pour exercer vos droits, contactez-nous via le{" "}
-                  <Link
-                    href="/contact"
+                  Pour exercer vos droits, contactez-nous à l’adresse{" "}
+                  <a
+                    href={business.emailHref}
                     className="text-accent hover:text-accent-dark transition-colors"
                   >
-                    formulaire de contact
-                  </Link>
+                    {business.email}
+                  </a>
                   . En cas de litige, vous pouvez saisir la CNIL —{" "}
                   <a
                     href="https://www.cnil.fr"
@@ -265,8 +265,14 @@ export default function MentionsLegalesPage() {
 }
 
 function LegalBlock({ title, children }: { title: string; children: React.ReactNode }) {
+  const id = title
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
   return (
-    <section>
+    <section id={id} className="scroll-mt-28">
       <h2
         className="text-accent-dark text-[clamp(1.6rem,2.6vw,2rem)] leading-[1.1] mb-6 pb-3 border-b border-accent/30"
         style={{

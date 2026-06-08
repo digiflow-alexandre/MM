@@ -12,7 +12,8 @@ export const business = {
   taglineShort: "Traiteur italien & niçois · Asnières-sur-Seine",
   phone: "06 82 88 96 51",
   phoneHref: "tel:+33682889651",
-  email: "", // À récupérer auprès de Cristelle
+  email: "cristelledoveri@gmail.com",
+  emailHref: "mailto:cristelledoveri@gmail.com",
   address: {
     street: "4 Rue Maurice Bokanowski",
     zip: "92600",

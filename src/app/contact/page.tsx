@@ -78,6 +78,16 @@ export default function ContactPage() {
               </div>
 
               <div className="flex flex-col gap-2">
+                <Kicker color="olive">E-mail</Kicker>
+                <a
+                  href={business.emailHref}
+                  className="text-dark text-[1.05rem] hover:text-accent transition-colors duration-[280ms]"
+                >
+                  {business.email}
+                </a>
+              </div>
+
+              <div className="flex flex-col gap-2">
                 <Kicker color="olive">Instagram</Kicker>
                 <a
                   href={business.instagram}

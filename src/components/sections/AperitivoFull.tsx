@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/Button";
 import { InlineLink } from "@/components/ui/InlineLink";
 import { WavyFrame } from "@/components/svg/WavyFrame";
 import { QuoteButton } from "@/components/site/QuoteButton";
+import { OrderButton } from "@/components/site/OrderButton";
 import {
   aperitivoPlateaux,
   aperitivoMignardises,
@@ -168,7 +169,7 @@ export function AperitivoFull() {
                 l’avance.
               </p>
               <div className="flex flex-wrap items-center gap-4">
-                <Button href="/contact">Passer commande</Button>
+                <OrderButton>Passer commande</OrderButton>
                 <QuoteButton variant="link">Demander un devis</QuoteButton>
               </div>
             </div>
@@ -373,7 +374,7 @@ export function AperitivoFull() {
                 Idéal en complément d’un plateau, pour rassasier les grandes
                 tablées.
               </p>
-              <Button href="/contact">Passer commande</Button>
+              <OrderButton>Passer commande</OrderButton>
             </div>
           </Reveal>
         </div>
@@ -397,7 +398,7 @@ export function AperitivoFull() {
                 composer votre buffet selon le nombre de convives.
               </p>
               <div className="flex flex-wrap items-center gap-4 lg:gap-6">
-                <Button href="/contact">Passer commande</Button>
+                <OrderButton>Passer commande</OrderButton>
                 <InlineLink href="/sur-mesure">Pour les grands événements</InlineLink>
               </div>
             </div>

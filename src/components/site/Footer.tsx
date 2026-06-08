@@ -32,6 +32,11 @@ export function Footer() {
               </a>
             </li>
             <li>
+              <a href={business.emailHref} className="transition-colors hover:text-accent break-all">
+                {business.email}
+              </a>
+            </li>
+            <li>
               {business.address.street}
               <br />
               {business.address.zip} {business.address.city}

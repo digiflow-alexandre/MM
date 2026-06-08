@@ -5,6 +5,8 @@ import { SmoothScroll } from "@/components/providers/SmoothScroll";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { QuoteModalProvider } from "@/components/site/QuoteModalProvider";
+import { CookieBanner } from "@/components/site/CookieBanner";
+import BeBookWidget from "@/components/ui/BeBookWidget";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -75,6 +77,8 @@ export default function RootLayout({
           <main>{children}</main>
           <Footer />
         </QuoteModalProvider>
+        <BeBookWidget />
+        <CookieBanner />
       </body>
     </html>
   );
